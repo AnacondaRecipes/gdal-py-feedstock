@@ -1,3 +1,6 @@
+# On conda-forge, this recipe and the Python bindings for GDAL are a single
+# split recipe.
+
 {% set version = "3.4.1" %}
 
 package:
@@ -10,7 +13,7 @@ source:
 
 build:
   number: 0
-  # package is not supported on linux-s390x - many dependencies missing
+  # package is not supported on linux-s390x - the libgdal is missing
   skip: True   [(win and vc<14) or s390x]
 
 build:
