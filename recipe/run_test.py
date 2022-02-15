@@ -1,6 +1,3 @@
-import os
-import sys
-
 from osgeo import gdal
 from osgeo import ogr
 from osgeo import osr
@@ -28,7 +25,7 @@ drivers = [
 
 for driver in drivers:
     print(driver)
-    assert gdal.GetDriverByName(driver)
+    assert gdal.GetDriverByName(driver), driver
 
 drivers = ["GML", "XLS", "KML", "LIBKML", "SQLite", "PostgreSQL"]
 for driver in drivers:
