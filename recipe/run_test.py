@@ -33,7 +33,7 @@ for driver in drivers:
 drivers = ["GML", "XLS", "KML", "LIBKML", "SQLite", "PostgreSQL"]
 for driver in drivers:
     print(driver)
-    assert ogr.GetDriverByName(driver)
+    assert ogr.GetDriverByName(driver), driver
 
 
 def has_geos():
