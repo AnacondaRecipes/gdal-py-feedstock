@@ -1,5 +1,3 @@
-call "%RECIPE_DIR%\set_bld_opts.bat"
-
 pushd swig\python
 
 %PYTHON% setup.py build_ext ^

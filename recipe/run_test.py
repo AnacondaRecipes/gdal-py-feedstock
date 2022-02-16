@@ -1,3 +1,5 @@
+import sys
+
 from osgeo import gdal
 from osgeo import ogr
 from osgeo import osr
@@ -20,14 +22,24 @@ drivers = [
     "PDF",
     "FITS",
     "TileDB",
-    "WebP",
 ]
+if sys.platform != 'win32':
+    drivers.append("WebP")
 
 for driver in drivers:
     print(driver)
     assert gdal.GetDriverByName(driver), driver
 
-drivers = ["GML", "XLS", "KML", "LIBKML", "SQLite", "PostgreSQL"]
+drivers = [
+    "GML",
+    "XLS",
+    "KML",
+    "SQLite",
+    "PostgreSQL",
+]
+if sys.platform != 'win32':
+    drivers.append("LIBKML")
+
 for driver in drivers:
     print(driver)
     assert ogr.GetDriverByName(driver), driver
