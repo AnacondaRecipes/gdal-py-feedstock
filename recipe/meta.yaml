@@ -48,13 +48,13 @@ test:
     - test_data
     - extra_tests.py
   imports:
-    - osgeo
-    - osgeo.ogr
-    - osgeo.gdal
-    - osgeo._gdal
-    - osgeo._gdalconst
-    - osgeo._ogr
-    - osgeo._osr
+    - osgeo                [not win32]
+    - osgeo.ogr            [not win32]
+    - osgeo.gdal           [not win32]
+    - osgeo._gdal          [not win32]
+    - osgeo._gdalconst     [not win32]
+    - osgeo._ogr           [not win32]
+    - osgeo._osr           [not win32]
 
 about:
   home: http://www.gdal.org
