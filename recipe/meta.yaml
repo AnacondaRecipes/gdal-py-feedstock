@@ -57,7 +57,9 @@ test:
     - osgeo._osr           [not win32]
 
 about:
-  home: http://www.gdal.org
+  home: https://www.gdal.org
   license: MIT
   license_file: LICENSE.TXT
   summary: Python bindibgs for GDAL
+  dev_url: https://github.com/OSGeo/gdal
+  doc_url: https://gdal.org/user/index.html
